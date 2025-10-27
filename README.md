@@ -1,4 +1,4 @@
-# Reddit Social Media Scraper
+# Reddit - Social Media Scraper
 
 ## Overview
 
@@ -78,7 +78,7 @@ make worker    # sets up Go modules in /worker
 make orchestrator # sets up Go modules in /orchestrator
 ```
 
-## 4. Start Redis and Azurite with Docker
+### 4. Start Redis and Azurite with Docker
 
 ```bash
 docker run -d -p 6379:6379 redis
