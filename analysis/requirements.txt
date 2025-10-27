@@ -1,0 +1,7 @@
+azure-storage-blob
+pandas
+nltk
+transformers
+torch
+dotenv
+azure-data-tables
