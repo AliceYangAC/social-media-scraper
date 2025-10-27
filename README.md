@@ -95,14 +95,17 @@ This gives you:
 ## 5. Run the orchestrator, worker, then sentiment analysis
 
 ```bash
+cd orchestrator
 go run main.go redis.go azurite.go job.go
 ```
 
 ```bash
+cd worker
 go run main.go scraper.go job.go azurite.go
 ```
 
 ```bash
+cd analysis
 py sentiment.py
 ```
 
