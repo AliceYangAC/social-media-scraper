@@ -20,13 +20,14 @@ func main() {
 		Addr: "localhost:6379",
 	})
 
-	// Enqueue jobs
+	// Subreddits to enqueue for scraping
 	urls := []string{
 		"https://old.reddit.com/r/canada/",
 		"https://old.reddit.com/r/worldnews/",
 		"https://old.reddit.com/r/technology/",
 	}
 
+	// Populate the ScrapeJob json with values needed for auditing & the worker
 	for _, url := range urls {
 		job := ScrapeJob{
 			URL:       url,
@@ -36,6 +37,7 @@ func main() {
 			Notes:     "Initial test scrape",
 		}
 
+		// Enqueue the scrape job json in Redis
 		if err := enqueueJob(rdb, job); err != nil {
 			log.Println("Failed to enqueue job:", err)
 		}

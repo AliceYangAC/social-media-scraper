@@ -19,13 +19,13 @@ func init() {
 	// Load .env file from current working directory
 	err := godotenv.Load()
 	if err != nil {
-		log.Fatal("❌ Error loading .env file")
+		log.Fatal("Error loading .env file")
 	}
 
 	// Read connection string from environment
 	azuriteConnStr = os.Getenv("AZURITE_STORAGE_CONNECTION_STRING")
 	if azuriteConnStr == "" {
-		log.Fatal("❌ AZURITE_STORAGE_CONNECTION_STRING not set in .env")
+		log.Fatal("AZURITE_STORAGE_CONNECTION_STRING not set in .env")
 	}
 }
 
