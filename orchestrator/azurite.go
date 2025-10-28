@@ -29,6 +29,7 @@ func init() {
 	}
 }
 
+// Function to ensure that Blob container exists for incoming scrapes
 func ensureBlobContainer(containerName string) {
 	ctx := context.Background()
 
@@ -52,6 +53,7 @@ func ensureBlobContainer(containerName string) {
 	}
 }
 
+// Function to ensure that Table exists for incoming job metadata
 func ensureTable(tableName string) {
 	ctx := context.Background()
 

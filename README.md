@@ -159,7 +159,7 @@ Each job result is stored as `job_id.json` in the container.
 ## Future Features
 
 - Improve automation:
-  - Redis-backed job queue: Use `scrape:jobs` and `analysis:jobs` queues to decouple orchestration, scraping, and sentiment analysis.
+  - Redis-backed job queue: Use `scrape:jobs` and `analysis:jobs` queues to decouple orchestration, scraping, and sentiment analysis replacing the persistent data store in Blob Storage.
 
   - Blocking job consumption: Scraper and analysis workers (to be implemented) will use Redis `BLPop` to wait for tasks, enabling real-time responsiveness without polling overhead.
 
